@@ -2,10 +2,4 @@
 base = "hello/"
 publish = "hello/build/"
 command = "yarn build"
-functions = "hello/functions"
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
-
+functions = "./src/functions"
