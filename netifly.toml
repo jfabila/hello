@@ -2,8 +2,10 @@
 base = "hello/"
 publish = "hello/build/"
 command = "yarn build"
+functions = "hello/src/functions"
 
 [[redirects]]
 from = "/*"
 to = "/index.html"
 status = 200
+
