@@ -2,7 +2,7 @@
 base = "hello/"
 publish = "hello/build/"
 command = "yarn build"
-functions = "hello/src/functions"
+functions = "hello/functions"
 
 [[redirects]]
 from = "/*"
