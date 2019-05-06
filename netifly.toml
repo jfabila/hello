@@ -2,4 +2,4 @@
 base = "hello/"
 publish = "hello/build/"
 command = "yarn build"
-functions = "./src/functions"
+functions = "./functions"
