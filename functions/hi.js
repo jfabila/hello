@@ -1,6 +1,10 @@
 exports.handler = function(event, context, callback) {
-    callback(null, {
-      statusCode: 200,
-      body: "Hello, World"
-    });
-  };
+    if (context.httpMethod === 'POST') {
+        console.log('We receive');
+        callback(null, {
+            statusCode: 200,
+            body: "Coool!"
+        });
+    }
+    return { statusCode: 404 }; 
+};
