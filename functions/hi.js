@@ -1,14 +1,10 @@
 exports.handler = function(event, context, callback) {
-    console.log(event);
-    console.log(context);
-    console.log(callback);
-    console.log('Function called by http ' + event.http_method);
-    if (context.httpMethod === 'POST') {
-        console.log('We receive');
-        callback(null, {
-            statusCode: 200,
-            body: "Coool!"
-        });
+    // console.log(event);
+    // console.log(context);
+    // console.log(callback);
+    console.log('Function called by http ' + event.httpMethod);
+    if (event.httpMethod === 'POST') {
+        return { statusCode: 200, body: 'All correct!' };
     }
     return { statusCode: 404 }; 
 };
