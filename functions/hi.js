@@ -1,4 +1,5 @@
 exports.handler = function(event, context, callback) {
+    console.log('Function called!')
     if (context.httpMethod === 'POST') {
         console.log('We receive');
         callback(null, {
