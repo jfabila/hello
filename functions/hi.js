@@ -1,8 +1,4 @@
 exports.handler = function(event, context, callback) {
-    // console.log(event);
-    // console.log(context);
-    // console.log(callback);
-    //console.log('Function called by http ' + event.httpMethod);
     if (event.httpMethod === 'POST') {
         
         const cid = event.queryStringParameters['CID'] || 0;
@@ -12,7 +8,14 @@ exports.handler = function(event, context, callback) {
 
         const infusionSoftObject = {
             cid, email, firstName, lastName
-        }
+        };
+
+        //TODO: Validar que la informacion que nos mandaron este completa (infusionSoftObject)
+        //TODO: Validar que no exista en plataforma
+        //TODO: Crear user en plataforma
+        //TODO: Crear trainee en plataforma 
+        //TODO: Buscar el program en BD de acuerdo al program tag que nos mandaron 
+        //TODO: Crear trainee_program_coach a.k.a. asignar bootcamp  
 
         callback(null, { statusCode: 200, body: JSON.stringify(infusionSoftObject) });
     }
