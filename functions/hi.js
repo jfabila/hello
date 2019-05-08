@@ -14,7 +14,7 @@ exports.handler = function(event, context, callback) {
             cid, email, firstName, lastName
         }
 
-        callback(null, { statusCode: 200, body: infusionSoftObject });
+        callback(null, { statusCode: 200, body: JSON.stringify(infusionSoftObject) });
     }
     callback(null, { statusCode: 401, body: 'Sorry, you can´t call me' });
 };
