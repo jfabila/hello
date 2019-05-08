@@ -4,7 +4,7 @@ exports.handler = function(event, context, callback) {
     // console.log(callback);
     console.log('Function called by http ' + event.httpMethod);
     if (event.httpMethod === 'POST') {
-        return { statusCode: 200, body: 'All correct!' };
+        callback(null, { statusCode: 200, body: 'Ok, you can call me!' });
     }
-    return { statusCode: 404 }; 
+    callback(null, { statusCode: 401, body: 'Sorry, you can´t call me' });
 };
